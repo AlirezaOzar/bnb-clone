@@ -64,9 +64,7 @@ const RentModal = () => {
   const ImageSrc = watch('ImageSrc');
 
 
-  const Map = useMemo(() => dynamic(() => import('../Map'), {
-    ssr: false
-  }), [location])
+ 
 
   const setCustomValue = (id: string, value: any) => {
     setValue(id, value, {
@@ -153,7 +151,6 @@ const RentModal = () => {
            value={location}
            onChange={(value) => setCustomValue('location', value)}
           />
-          <Map center={location?.latlng}/>
       </div>
     )
   }
