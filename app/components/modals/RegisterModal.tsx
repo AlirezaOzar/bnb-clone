@@ -37,7 +37,9 @@ const RegisterModal = () => {
     axios
       .post("/api/register", data)
       .then(() => {
+        toast.success("Register Success");
         registerModal.onClose(); // if the request is success then close the modal
+        loginModal.onOpen();
       })
       .catch((error) => {
         toast.error("Something went wrong");
@@ -127,4 +129,4 @@ const RegisterModal = () => {
 
 export default RegisterModal;
 
-// 1:10:19
+// 7 :33 : 26
