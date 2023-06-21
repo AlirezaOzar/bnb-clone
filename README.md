@@ -1,3 +1,7 @@
+
+![Screenshot 2023-06-21 090913](https://github.com/AlirezaOzar/bnb-clone/assets/108988996/963b5ab6-c17f-4c8a-a94e-69798bdac9f2)
+
+
 ## About 
 
 This is an Airbnb clone project developed with NextJS & Typecript and its backend developed with Prisma and MongoDB 
