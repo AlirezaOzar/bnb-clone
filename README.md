@@ -1,34 +1,58 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## About 
 
-## Getting Started
+This is an Airbnb clone project developed with NextJS & Typecript and its backend developed with Prisma and MongoDB 
+database. In this project, we can choose our product based on the desired category and upload our desired photo 
+and price, and the Next-auth package is used for its authentication.
 
-First, run the development server:
+## Backend technologies
+
+I used the Prisma tool to create the backend of this project and I was able to create the user and product data, and by using the user's information, I can authenticate it and store all the data in the Mongodb database.
+
+## Authentication
+I used next-auth package for user authentication its very simple , the user can sign in with the github , email , and it has many providers you can choose for your authentication
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+npm install next-auth
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Post products
+* ## Select Location
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+The user can upload his product in his account with the desired photo, location and price. This part was very challenging for me in this project and increased my abilities. After choosing the category of his product, the user can place it on the map. Choose your desired one ,, I used leaflet package for the maps 
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+```bash
+npm i leaflet
+```
+* ## Select Category
+   Also, the user can choose his product category depending on the price and location he wants
+  
+* ## Upload Image
+  I used cloudinary package for uploading the products image
 
-## Learn More
+  ```bash
+   npm i cloudinary
+  ```
 
-To learn more about Next.js, take a look at the following resources:
+### Cloning the repository
+  ```bash
+    git clone https://github.com/AlirezaOzar/bnb-clone.git
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Setup .env file
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```bash
+DATABASE_URL=
+GOOGLE_CLIENT_ID=
+GOOGLE_CLIENT_SECRET=
+GITHUB_ID=
+GITHUB_SECRET=
+NEXTAUTH_SECRET=
+```
+### Steup Prisma
+```bash
+npx prisma db push
+```
+### Start the app
+```bash
+npm run dev
+```
